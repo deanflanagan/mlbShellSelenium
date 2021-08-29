@@ -1,0 +1,37 @@
+(venv) C:\Users\Dean\Desktop\coding\oddsportal>heroku run python manage.py scrape
+ »   Warning: heroku update available from 7.42.13 to 7.52.0.
+Running python manage.py scrape on ⬢ django-scraper-mlb... up, run.1655 (Free)
+/app/.heroku/python/lib/python3.9/site-packages/selenium/webdriver/firefox/firefox_profile.py:208: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if setting is None or setting is '':
+System check identified some issues:
+
+WARNINGS:
+scraping.Game: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
+        HINT: Configure the DEFAULT_AUTO_FIELD setting or the ScrapingConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
+Traceback (most recent call last):
+  File "/app/manage.py", line 21, in <module>
+    main()
+  File "/app/manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 354, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 398, in execute
+    output = self.handle(*args, **options)
+  File "/app/scraping/management/commands/scrape.py", line 228, in handle
+    driver.get(url)
+  File "/app/.heroku/python/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/app/.heroku/python/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/app/.heroku/python/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: -0.003
+  (Session info: headless chrome=90.0.4430.72)
+
+
+(venv) C:\Users\Dean\Desktop\coding\oddsportal>
+
